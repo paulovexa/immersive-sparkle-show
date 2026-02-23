@@ -1,5 +1,6 @@
 import FadeInSection from "./FadeInSection";
 import AnimatedCounter from "./AnimatedCounter";
+import { motion } from "framer-motion";
 
 const stats = [
   { value: 5.5, suffix: " bi", prefix: "R$ ", label: "Mercado OOH Brasil (2024)" },
@@ -13,34 +14,43 @@ const StatsSection = () => {
     <section className="py-32 relative">
       <div className="container mx-auto px-6">
         <FadeInSection>
-          <p className="text-primary font-display font-semibold text-sm tracking-[0.2em] uppercase mb-4">
-            O Mercado
-          </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-16 max-w-3xl leading-tight">
-            Crescimento do mercado OOH no Brasil
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-px bg-gradient-brand" />
+            <p className="text-primary font-display font-bold text-sm tracking-[0.25em] uppercase">
+              O Mercado
+            </p>
+          </div>
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold text-foreground mb-20 max-w-3xl leading-[1.1] tracking-tight">
+            Crescimento do mercado{" "}
+            <span className="text-gradient-brand">OOH no Brasil</span>
           </h2>
         </FadeInSection>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((s, i) => (
             <FadeInSection key={i} delay={i * 0.1}>
-              <div className="glass-surface rounded-2xl p-8 text-center group hover:border-primary/30 transition-colors">
-                <p className="font-display text-4xl md:text-5xl font-bold text-gradient-brand mb-3">
+              <motion.div
+                className="glass-surface gradient-border rounded-2xl p-8 text-center hover-lift"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.4 }}
+              >
+                <p className="font-display text-4xl md:text-5xl font-extrabold text-gradient-brand mb-3">
                   <AnimatedCounter end={s.value} suffix={s.suffix} prefix={s.prefix} />
                 </p>
-                <p className="text-muted-foreground text-sm">{s.label}</p>
-              </div>
+                <p className="text-muted-foreground text-sm font-medium">{s.label}</p>
+              </motion.div>
             </FadeInSection>
           ))}
         </div>
 
         <FadeInSection delay={0.4}>
-          <div className="glass-surface rounded-2xl p-10 mt-12 max-w-3xl mx-auto">
+          <div className="glass-surface gradient-border rounded-2xl p-12 mt-16 max-w-3xl mx-auto relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
             <p className="text-muted-foreground text-lg leading-relaxed text-center">
               O meio físico continua <span className="text-foreground font-semibold">forte e valorizado</span> pelos
               anunciantes, sobretudo em campanhas com foco em{" "}
-              <span className="text-primary font-semibold">presença local</span> e{" "}
-              <span className="text-primary font-semibold">lembrança de marca</span>.
+              <span className="text-primary font-bold">presença local</span> e{" "}
+              <span className="text-primary font-bold">lembrança de marca</span>.
             </p>
           </div>
         </FadeInSection>
