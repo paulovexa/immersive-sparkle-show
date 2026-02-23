@@ -55,7 +55,7 @@ const Hero = () => (
         transition={{ duration: 0.8, delay: 0.5 }}
       >
         A maior rede de mídia de mesa do país — porta-copos publicitários em
-        bares e restaurantes com alta atenção e alcance hiperlocal.
+        restaurantes, cafés e estabelecimentos com alta atenção e alcance hiperlocal.
       </motion.p>
 
       <motion.div

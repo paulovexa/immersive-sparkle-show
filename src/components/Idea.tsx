@@ -11,7 +11,7 @@ const Idea = () => (
           <span className="text-gradient-brand">onde as pessoas se conectam.</span>
         </h2>
         <p className="text-lg text-muted-foreground max-w-xl mb-16 leading-relaxed">
-          Enquanto o digital disputa frações de segundo, nós capturamos atenção no
+          Enquanto o digital disputa frações de segundo, nós capturamos a atenção no
           momento social — com mídia contextual, tangível e recorrente.
         </p>
       </Reveal>
