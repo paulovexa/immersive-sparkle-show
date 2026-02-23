@@ -4,7 +4,7 @@ import { Zap, MapPin, RotateCw, type LucideIcon } from "lucide-react";
 const features: { icon: LucideIcon; title: string; desc: string }[] = [
   { icon: Zap, title: "Alta frequência", desc: "Exposição contínua durante toda a experiência — cada interação é uma impressão de marca." },
   { icon: MapPin, title: "Distribuição controlada", desc: "Escolha bairros, perfis e estabelecimentos. Publicidade granular como nunca antes." },
-  { icon: RotateCw, title: "Campanhas rotativas", desc: "Batches ativam múltiplos bares por 4 semanas, criando presença contínua e escalável." },
+  { icon: RotateCw, title: "Campanhas rotativas", desc: "Batches ativam múltiplos estabelecimentos por 4 semanas, criando presença contínua e escalável." },
 ];
 
 const Solution = () => (

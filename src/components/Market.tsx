@@ -5,7 +5,7 @@ const stats = [
   { end: 5, suffix: ",5 bi", prefix: "R$", label: "Mercado OOH Brasil 2024" },
   { end: 89, suffix: "%", prefix: "", label: "Da população atingida por OOH" },
   { end: 11, suffix: "%", prefix: "", label: "Do bolo publicitário total" },
-  { end: 10887, suffix: "", prefix: "", label: "Bares e restaurantes em Manaus" },
+  { end: 10887, suffix: "", prefix: "", label: "Restaurantes e estabelecimentos em Manaus" },
 ];
 
 const Market = () => (
