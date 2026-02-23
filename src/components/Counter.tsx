@@ -1,14 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 
-interface CounterProps {
+interface Props {
   end: number;
   suffix?: string;
   prefix?: string;
-  duration?: number;
 }
 
-const AnimatedCounter = ({ end, suffix = "", prefix = "", duration = 2 }: CounterProps) => {
+const Counter = ({ end, suffix = "", prefix = "" }: Props) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -16,7 +15,8 @@ const AnimatedCounter = ({ end, suffix = "", prefix = "", duration = 2 }: Counte
   useEffect(() => {
     if (!isInView) return;
     let start = 0;
-    const step = end / (duration * 60);
+    const duration = 1500;
+    const step = end / (duration / 16);
     const timer = setInterval(() => {
       start += step;
       if (start >= end) {
@@ -25,9 +25,9 @@ const AnimatedCounter = ({ end, suffix = "", prefix = "", duration = 2 }: Counte
       } else {
         setCount(Math.floor(start));
       }
-    }, 1000 / 60);
+    }, 16);
     return () => clearInterval(timer);
-  }, [isInView, end, duration]);
+  }, [isInView, end]);
 
   return (
     <span ref={ref} className="tabular-nums">
@@ -36,4 +36,4 @@ const AnimatedCounter = ({ end, suffix = "", prefix = "", duration = 2 }: Counte
   );
 };
 
-export default AnimatedCounter;
+export default Counter;
