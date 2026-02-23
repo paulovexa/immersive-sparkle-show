@@ -1,23 +1,21 @@
-import HeroSection from "@/components/HeroSection";
-import IdeaSection from "@/components/IdeaSection";
-import ProblemSection from "@/components/ProblemSection";
-import SolutionSection from "@/components/SolutionSection";
-import StatsSection from "@/components/StatsSection";
-import RevenueSection from "@/components/RevenueSection";
-import CTASection from "@/components/CTASection";
+import Hero from "@/components/Hero";
+import Idea from "@/components/Idea";
+import Problem from "@/components/Problem";
+import Solution from "@/components/Solution";
+import Market from "@/components/Market";
+import Revenue from "@/components/Revenue";
+import CTA from "@/components/CTA";
 
-const Index = () => {
-  return (
-    <main className="bg-background min-h-screen overflow-x-hidden">
-      <HeroSection />
-      <IdeaSection />
-      <ProblemSection />
-      <SolutionSection />
-      <StatsSection />
-      <RevenueSection />
-      <CTASection />
-    </main>
-  );
-};
+const Index = () => (
+  <main className="bg-background min-h-screen">
+    <Hero />
+    <Idea />
+    <Problem />
+    <Solution />
+    <Market />
+    <Revenue />
+    <CTA />
+  </main>
+);
 
 export default Index;
