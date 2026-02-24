@@ -3,7 +3,6 @@ import Idea from "@/components/Idea";
 import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
 import Market from "@/components/Market";
-import Revenue from "@/components/Revenue";
 import CTA from "@/components/CTA";
 
 const Index = () => (
@@ -13,7 +12,6 @@ const Index = () => (
     <Problem />
     <Solution />
     <Market />
-    <Revenue />
     <CTA />
   </main>
 );
