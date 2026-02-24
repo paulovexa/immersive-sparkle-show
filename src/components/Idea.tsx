@@ -57,25 +57,6 @@ const Idea = () => (
         </div>
       </Reveal>
 
-      {/* Brands showcase */}
-      <Reveal>
-        <div className="relative rounded-3xl overflow-hidden mb-16 group">
-          <motion.img
-            src={brandsImg}
-            alt="Porta-copos com diversas marcas"
-            className="w-full h-[280px] md:h-[400px] object-cover"
-            whileHover={{ scale: 1.03 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/30 pointer-events-none" />
-          <div className="absolute bottom-8 left-8 right-8">
-            <p className="text-foreground font-display font-700 text-xl md:text-2xl">
-              Marcas locais e nacionais, na mesa do consumidor.
-            </p>
-          </div>
-        </div>
-      </Reveal>
-
       {/* Feature cards */}
       <div className="grid md:grid-cols-3 gap-5">
         {[
